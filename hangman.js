@@ -12,6 +12,7 @@ HangMan.prototype.checkState = function(){
 
     if (this.remainingGuess < 1) {
         this.status='failed'
+        this.remainingGuess = 0
     } else if (finished) {
         this.status = 'finish'
     }else{
