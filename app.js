@@ -2,7 +2,7 @@ let game1
 
 const startGame = async () => {
     const puzzle = await getWord()
-    game1 = new HangMan(puzzle, Math.floor(puzzle.length/2))
+    game1 = new HangMan(puzzle, Math.floor(puzzle.length/1.3))
     document.querySelector('#puzzel').textContent = game1.getPuzzel()
     document.querySelector('#status').textContent= game1.status
     document.querySelector('#duplicate').textContent = ' '
@@ -18,5 +18,5 @@ window.addEventListener('keypress', (e) => {
    game1.checkState()
    document.querySelector('#puzzel').textContent = game1.getPuzzel()
    document.querySelector('#status').textContent= game1.status
-   document.querySelector('#duplicate').textContent =`your remaining guesses : ${game1.remainingGuess}`
+   document.querySelector('#remaining').textContent =`your remaining guesses : ${game1.remainingGuess}`
 })
